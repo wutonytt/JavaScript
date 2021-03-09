@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+body {
+    padding: 80px;
+}
+
+/* 設定container的背景顏色、長、寬、和位置性質 */
+div#container {
+    background-color: rgb(178, 163, 150);
+    width: 40em;
+    height: 40em;
+    border-radius: 10px;
+    margin: auto;
+}
+
+/* 設定brick class的位置、大小、文字、圓角 */
+.brick {
+    float: left;
+    background-color: rgb(198, 184, 172);
+    border-radius: 5px;
+    margin: 8px;
+    font-size: 80px;
+    font-weight: bold;
+    font-family: "Clear Sans", "Helvetica Neue", Arial;
+    text-align: center;
+    line-height: 140px;
+    width: 144px;
+    height: 144px;
+}
+
+.brick:nth-of-type(4n+1) {
+    clear: both;
+}
+
+.brick2 {
+    background-color: rgb(235, 224, 213);
+    color: black;
+}
+
+.brick4 {
+    background-color: rgb(235, 221, 194);
+    color: black;
+}
+
+.brick8 {
+    background-color: rgb(241, 169, 111);
+    color: white;
+}
+
+.brick16 {
+    background-color: rgb(244, 139, 89);
+    color: white;
+}
+
+.brick32 {
+    background-color: rgb(245, 113, 84);
+    color: white;
+}
+
+.brick64 {
+    background-color: rgb(245, 84, 52);
+    color: white;
+}
+
+.brick128 {
+    background-color: rgb(234, 201, 104);
+    color: white;
+    font-size: 70px;
+}
+
+.brick256 {
+    background-color: rgb(238, 201, 89);
+    color: white;
+    font-size: 70px;
+}
+
+.brick512 {
+    background-color: rgb(231, 190, 67);
+    color: white;
+    font-size: 70px;
+}
+
+.brick1024 {
+    background-color: rgb(234, 189, 55);
+    color: white;
+    font-size: 50px;
+}
+
+.brick2048 {
+    background-color: rgb(250, 189, 8);
+    color: white;
+    font-size: 50px;
+}

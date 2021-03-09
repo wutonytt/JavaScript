@@ -1,0 +1,86 @@
+/* 將預設body的margin及padding設為0 */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    width: 100%; /*將整個nav的寬度設為100％*/
+    top: 0; /*將nav頂到最上面*/
+    height: 60px; /*將整個nav的高度設為60px*/
+    margin: 0; /*將nav的邊界貼齊body的邊界*/
+    background-color: rgb(59, 86, 168); /*設定背景顏色*/
+}
+
+#logo, nav ul {
+    margin: 0;
+    padding: 0;
+    float: left; /*利用float靠左對齊排成水平的*/
+    background-color: rgb(59, 86, 168);
+}
+
+nav ul {
+    list-style-type: none; /*取消list的樣式：前面的點點*/
+}
+
+#form-search {
+    float: right; /*利用float靠右對齊*/
+    background-color: rgb(59, 86, 168);
+    display: block; /*將搜尋列以block的方式呈現*/
+    padding: 17px; /*上下padding*/
+    color: white; /*Ｓearch字樣的顏色*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /*字體*/
+}
+
+#logo img {
+    display: block; /*將icon圖片以block的方式呈現*/
+    height: 60px;
+}
+
+nav ul li {
+    float: left; /*實現list中水平排列*/
+}
+
+nav ul li a {
+    display: block;
+    padding: 21.73px 14px;
+    color: white;
+    text-align: center; /*將list的字左右置中*/
+    text-decoration: none; /*刪除底線*/
+    font-family: 標楷體;
+    transition: background-color .6s; /*轉換成hover的秒數*/
+}
+
+/*游標移到選項時變色*/
+nav ul li a:hover {
+    background-color: rgb(43, 22, 117); /*背景顏色*/
+    color: white; /*文字顏色*/
+}
+
+/*螢幕寬度小於480px時改變樣式*/
+@media screen and (max-width: 480px) {
+    nav {
+        display: grid; /*改用grid呈現以實現指定位置*/
+    }
+    /*將logo設在row 1, column 1*/
+    #logo {
+        grid-row: 1;
+        grid-column: 1;
+    }
+    /*將search bar設在row 1, column 2*/
+    #form-search {
+        grid-row: 1;
+        grid-column: 2;
+    }
+    /*將選單設在row 2, column 1且span兩個column*/
+    nav ul {
+        display: block;
+        grid-column: 1 / span 2;
+        grid-row: 2;
+        padding: 0 0;
+    }
+
+    nav ul li {
+        float: none; /*選單改成垂直呈現*/
+    }
+}

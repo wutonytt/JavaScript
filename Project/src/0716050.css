@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* 設定container的背景顏色、常、寬、和位置性質 */
+#container {
+    background-image: url("./images/S__35749896.jpg");
+    background-size: cover;
+    width: 1600px;
+    height: 800px;
+    border: 3px solid red;
+    position: fixed;
+    /* position: relative; */
+}
+
+/* 設定球的邊界、位置性質，並初始化球的位置供js更改 */
+.ball {
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.net {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.dog {
+    /* border-radius: 100%; */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.score {
+    position: absolute;
+    top: 0;
+    left: 0;
+}

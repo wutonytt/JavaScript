@@ -1,0 +1,48 @@
+/* 將預設body的margin及padding設為定背景顏色 */
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(59, 86, 168)
+}
+
+/* 設定標題位置置中、字型及顏色 */
+h1 {
+    text-align: center;
+    font-family: fantasy, Copperplate, Papyrus;
+    color: white;
+}
+
+/* 將整個含有table的div置中並設定寬度 */
+div {
+    margin: auto;
+    width: 50%;
+}
+
+/* 設定table的形式、邊界的線條、以及字型，最後設定table間的距離*/
+table {
+    display: inline-block;
+    border: 1px solid white;
+    border-collapse: collapse;
+    font-family: sans-serif;
+    margin: 10px
+}
+
+/* 設定table的標題顏色及padding */
+th {
+    color: white;
+    background-color: rgb(43, 22, 117);
+    padding: 4px;
+}
+
+/* 設定table中的線條以及table中elements的padding，以及table中個elements的字型 */
+tr, td{
+    border:1px solid white;
+    padding: 4px;
+    font-family: STHeiti, Microsoft JhengHei ;
+}
+
+/* 設定table中數字的顏色以及位置置中 */
+td {
+  text-align: center;
+  color: #F2F3F4;
+}

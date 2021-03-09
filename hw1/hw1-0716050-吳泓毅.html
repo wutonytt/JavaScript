@@ -1,0 +1,140 @@
+<!DOCTYPE html> <!--HTML5-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--中文編碼-->
+    <title>My Homepage</title>
+    <meta name="keywords" content="Homepage">
+    <meta name="author" content="TonyWu">
+    <link rel="shortcut icon" type="image/x-icon" href="TonyWu.png">
+    <link rel="stylesheet" type="text/css" href="hw1.css">
+</head>
+
+<body>
+<!-- 設定標題 -->
+    <header>
+        <br>
+        <a href="hw1-0716050-吳泓毅.html">
+            <h1>My Homepage</h1>
+        </a>
+        <br>
+    </header>
+
+<!-- 設定nav的list，並加上連結對應到相連的section -->
+    <nav>
+        <ul>
+            <li><a href="#aboutme">About Me</a></li>
+            <li><a href="#contactinfo">Contact Info</a></li>
+            <li><a href="#myfavorite">My Favorite</a></li>
+            <li><a href="#mapdiv">Hsinchu Map</a></li>
+            <li class="dropdown">
+                <a class="dropbtn" id="homeworkbtn">Homework</a>
+                <div class="dropdown-content">
+                    <a href="#hw2">HW2</a>
+                    <a href="#hw3">HW3</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+<!-- 預設首頁選About Me -->
+    <script>
+    (function() {
+        if (window.location.hash) {
+            window.location.hash;
+        }
+        else {
+            window.location.hash = "#aboutme";
+        };
+    })();
+    </script>
+
+
+<!-- about me -->
+    <div id="aboutme" class="tab-content tab1 default-tab">
+        <img src="myphoto.jpg" alt="rdj" title="Robert Downey Jr.">
+        <div id="table">
+            <dt>
+                <h3>基本資料</h3>
+            </dt>
+            <dd>姓名：吳泓毅</dd>
+            <dd>英文名：Tony Wu</dd>
+            <dd>學號：0716050</dd>
+            <dd>生日：2000年08月03號</dd>
+            <dd>星座血型：獅子座 / A型</dd>
+        </div>
+    </div>
+
+<!-- contact info -->
+    <div id="contactinfo" class="tab-content tab2">
+        <dl>
+            <dt>
+                <h3>Contact Info</h3>
+            </dt>
+            <dd>手機：0910-726-098</dd>
+            <dd>City: New Taipei City, Taiwan</dd>
+            <!-- 點Email會開啟信件的程式 -->
+            <dd>Email: <a href="mailto:wutonytt.cs07@nctu.edu.tw">wutonytt.cs07@nctu.edu.tw</a></dd>
+        </dl>
+    </div>
+
+<!-- My favorite -->
+    <div id="myfavorite" class="tab-content tab3">
+        <h3>Actor: Robert Downey Jr.</h3>
+        <!-- 將圖片加上連結 -->
+        <a href="https://www.instagram.com/robertdowneyjr/?hl=zh-tw">
+            <img src="rdj.jpg" alt="rdj" title="Robert Downey Jr.">
+        </a>
+        <br>
+        <h3>Song: Little Voice</h3>
+        <!-- 不設定自動播放 -->
+        <video src="LittleVoice.mp4" controls="controls">
+            do not support HTML5
+        </video>
+    </div>
+
+<!-- map -->
+    <div id="mapdiv" class="tab-content tab4">
+        <h3>Hsinchu City Map</h3>
+        <img src="HsinchuMap.png" usemap="#hsinchu" alt="Hsinchu Map">
+        <map id="hsinchu" name="hsinchu">
+            <!-- 用poly畫選取範圍，並加上連結 -->
+            <area shape="poly"
+                coords="474,161,444,191,398,200,376,220,398,243,374,261,379,270,353,283,371,313,355,313,351,328,338,334,327,375,356,373,362,402,356,439,360,468,374,452,396,415,429,426,459,403,450,377,476,362,497,348,525,364,571,387,593,430,595,453,616,452,632,437,645,430,627,417,625,380,629,371,611,356,621,343,608,334,609,320,596,298,602,286,595,271,596,256,576,237,554,208,527,182,503,163"
+                href="https://zh.wikipedia.org/wiki/%E6%9D%B1%E5%8D%80_(%E6%96%B0%E7%AB%B9%E5%B8%82)" alt="East Dist."
+                title="East Dist." target="note">
+
+            <area shape="poly"
+                coords="228,40,224,66,209,81,199,90,189,105,177,121,164,140,154,162,186,161,208,154,255,167,280,181,276,199,300,218,306,223,307,251,319,252,331,258,338,269,329,296,338,329,347,325,359,312,368,308,350,283,372,271,371,259,395,246,377,219,391,213,397,199,440,188,447,198,474,158,451,136,412,135,388,125,364,124,341,121,325,109,308,96,290,78,279,59,267,46,248,39"
+                href="https://zh.wikipedia.org/zh-tw/北區_(新竹市)" alt="North Dist." title="North Dist." target="note">
+
+            <area shape="poly"
+                coords="148,167,144,207,155,226,177,216,182,236,176,244,180,274,170,299,168,329,163,368,150,408,127,432,147,435,126,495,70,529,57,532,37,550,48,557,65,555,78,561,117,548,147,523,159,548,171,577,175,590,178,605,185,613,178,620,181,629,198,630,209,638,237,633,253,644,266,630,267,613,270,584,279,573,281,553,291,515,306,502,328,509,345,504,344,490,353,482,354,467,348,450,361,428,355,408,360,394,357,383,342,380,331,387,321,376,327,358,336,342,331,330,329,314,323,296,332,271,323,260,308,257,297,243,299,228,299,218,284,208,276,204,270,197,275,186,264,179,252,173,236,166,214,160,189,166"
+                href="https://zh.wikipedia.org/wiki/香山區" alt="Xiangshan Dist." title="Xiangshan Dist." target="note">
+        </map>
+        <!-- 設定內嵌視窗顯示連結網頁內容 -->
+        <iframe id="note" name="note" srcdoc="Choose a region on the left." width="800" height="700">
+            do not support inline frame.
+        </iframe>
+    </div>
+
+<!-- homework -->
+    <div id="hw2" class="tab-content tab5">
+        <!-- 利用相對路徑call以前的作業 -->
+        <h3>Homework 2</h3>
+        <a href="hw2/hw2-0716050-吳泓毅.html" target="_blank">hw2 html link</a>
+    </div>
+
+    <div id="hw3" class="tab-content tab6">
+        <h3>Homework 3</h3>
+        <a href="hw3/hw3-0716050-吳泓毅.html" target="_blank">hw3 html link</a>
+    </div>
+
+    <!-- 設定footer -->
+    <footer>
+        Copyright &copy; 2020 Tony Wu
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,251 @@
+/* 將body的margin及padding設為0，把預設的消掉，並且設定字體 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* header: 設定header背景顏色 */
+header {
+    background-color: rgb(33, 61, 145);
+}
+
+/* 設定header的字的顏色、大小、置中，並去掉連結預設的樣式 */
+header a {
+    color: white;
+    font-size: large;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* nav bar: 將nav bar的寬度設為100％，並將position設為sticky，向上scroll的時候nav bar
+會黏在螢幕頂端 (top: 0) */
+nav {
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+/* 設定選項背景顏色，將list前面的點點去掉，display: flex; justify-content: center;
+以將選項置中 */
+nav ul {
+    background-color: rgb(33, 61, 145);
+    list-style-type: none;
+    margin: 0;
+    padding: 0 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+/* 向最左邊的選項float */
+nav ul li {
+    float: left;
+}
+
+/* 設定選項的padding、置中，轉換背景顏色的時間 */
+nav ul li a, .dropbtn {
+    display: block;
+    padding: 14px 40px;
+    color: rgb(224, 223, 223);
+    text-align: center;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: background-color .6s;
+}
+
+/* 當游標碰到選項時變色 */
+nav ul li a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(43, 22, 117);
+    color: rgb(224, 223, 223);
+}
+
+/* 設定下拉式選單的形式 */
+nav ul li.dropdown {
+    display: block;
+}
+
+/* 設定下拉式選單的選項 */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(91, 116, 194);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* 設定下拉式選單的選項的文字 */
+.dropdown-content a {
+    color: rgb(224, 223, 223);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+/* 當游標碰到選項時變色 */
+.dropdown-content a:hover {
+    background-color: rgba(53, 29, 138, 0.87);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* 一開始先不顯示content */
+.tab-content:not(:target) {
+    display: none;
+}
+
+/* 選到在顯示 */
+.tab-content:target {
+    display: grid;
+}
+
+/* about me: 設定padding */
+#aboutme {
+    padding: 100px 200px;
+}
+
+/* 因為是用grid，所以設定img在第一個column */
+#aboutme img {
+    width: 400px;
+    grid-column: 1;
+}
+
+/* 設定在第二個column */
+#aboutme #table {
+    font-size: large;
+    grid-column: 2;
+}
+
+/* my favorite: 設定padding */
+#myfavorite {
+    padding: 100px 200px;
+}
+
+#myfavorite img {
+    width: 400px;
+}
+
+#myfavorite video {
+    width: 100%;
+}
+
+/* contact info: 設定padding */
+#contactinfo {
+    font-size: large;
+    padding: 100px 200px;
+}
+
+/* map: 設定padding */
+#mapdiv {
+    padding: 100px 50px;
+}
+
+/* 因為是用grid，所以設定img在第一個column */
+#mapdiv img{
+    grid-column: 1;
+}
+
+/* 設定iframe在第三個column */
+#mapdiv iframe {
+    border:solid 2px rgb(46, 53, 155);
+    grid-column: 3;
+}
+
+/* 設定padding */
+#hw2 {
+    padding: 100px 200px;
+}
+
+/* 設定padding */
+#hw3 {
+    padding: 100px 200px;
+}
+
+
+/* footer: 置中、padding、顏色，並將position設為fixed，固定在視窗最下方 (bottom: 0) */
+footer {
+    text-align: center;
+    padding: 5px;
+    color: white;
+    background-color: rgb(33, 61, 145);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* change from horizontal to vertical when the screen width is smaller than 480px. */
+@media screen and (max-width: 480px) {
+    nav {
+        position: static;
+    }
+
+    /* 因為本來是用flex所以這邊要改回block在會照正常排 */
+    nav ul {
+        padding-left: 0;
+        padding-right: 0;
+        display: block;
+    }
+
+    /* float: none;變成直的 */
+    nav ul li {
+        float: none;
+    }
+
+    #aboutme {
+        padding: 100px 40px;
+    }
+
+    /* 將aboutme中的img和#table改為直的 */
+    /* img設為第一個row */
+    #aboutme img {
+        width: 300px;
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    /* #table設為第二個row */
+    #aboutme #table {
+        font-size: large;
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    #contactinfo {
+        padding: 100px 40px;
+    }
+
+    #myfavorite {
+        padding: 100px 40px;
+    }
+
+    #mapdiv {
+        padding: 100px 20px;
+    }
+
+    /* 將中mapdiv的地圖img和iframe改為直的 */
+    /* img設為第一個row */
+    #mapdiv img{
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    /* iframe設為第二個row */
+    #mapdiv iframe {
+        border:solid 2px rgb(46, 53, 155);
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    #hw2 {
+        padding: 100px 40px;
+    }
+
+    #hw3 {
+        padding: 100px 40px;
+    }
+}

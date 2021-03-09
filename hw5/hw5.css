@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+/* 設定container的背景顏色、常、寬、和位置性質 */
+#container {
+    background-color: black;
+    width: 800px;
+    height: 600px;
+    position: relative;
+}
+
+/* 設定球的邊界、位置性質，並初始化球的位置供js更改 */
+.ball {
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
